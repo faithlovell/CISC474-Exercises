@@ -1,13 +1,13 @@
 var admin = require("firebase-admin");
 
-var serviceAccount = require("./etc/secrets/exercise-5-474-firebase-adminsdk-n5qvd-f9a72a320b.json");
+var serviceAccount = require("/etc/secrets/exercise-5-474-firebase-adminsdk-n5qvd-f9a72a320b.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://exercise-5-474-default-rtdb.firebaseio.com"
 });
 
-// Get a database reference to our blog
+// Get a database reference to our blogg
 const { getDatabase } = require('firebase-admin/database');
 const db = getDatabase();
 const ref = db.ref('server/saving-data/');
